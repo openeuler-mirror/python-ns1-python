@@ -1,13 +1,13 @@
 %global _empty_manifest_terminate_build 0
 Name:		python-ns1-python
 Version:	0.16.0
-Release:	1
+Release:	2
 Summary:	Python SDK for the NS1 DNS platform
 License:	MIT
 URL:		https://github.com/ns1/ns1-python
 Source0:	https://files.pythonhosted.org/packages/93/5a/7024d3f35170c83f9e83945d7c8ab85eefc547dfc7c5854748c1bc719b1b/ns1-python-0.16.0.tar.gz
 BuildArch:	noarch
-BuildRequires:  python3-pip
+BuildRequires:  python3-pip python3-pytest-runner
 %global _description %{expand:
 This package provides a python SDK for accessing the NS1 DNS platform
 and includes both a simple NS1 REST API wrapper as well as a higher level
@@ -72,5 +72,8 @@ mv %{buildroot}/doclist.lst .
 %{_docdir}/*
 
 %changelog
+* Wed May 18 2022 lvxiaoqian <xiaoqian@nj.iscas.ac.cn>
+- add necessary BuildRequires
+
 * Sun May 23 2021 Python_Bot <Python_Bot@openeuler.org>
 - Package Spec generated
